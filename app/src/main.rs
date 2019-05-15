@@ -10,6 +10,8 @@ use ray_tracer::*;
 use image::ImageFormat;
 use ray_tracer::scene::Scene;
 use ray_tracer::sphere::Sphere;
+use ray_tracer::plane::Plane;
+use ray_tracer::vector::Vector3;
 use ray_tracer::point::Point;
 use ray_tracer::color::Color;
 
@@ -37,9 +39,28 @@ fn main() {
                     1.0
                 },
                 color: Color {
-                    red: 0.5,
+                    red: 1.0,
                     green: 0.5,
                     blue: 0.5
+                }
+            }
+        },
+        plane: {
+            Plane {
+                origin: Point {
+                    x: 0.0,
+                    y: -2.0,
+                    z: 0.0
+                },
+                normal: Vector3 {
+                    x: 0.0,
+                    y: -1.0,
+                    z: 0.0,
+                },
+                color: Color {
+                    red: 0.0,
+                    green: 0.0,
+                    blue: 1.0
                 }
             }
         }
