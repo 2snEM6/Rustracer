@@ -43,16 +43,12 @@ pub fn render(scene: &Scene) -> DynamicImage {
             if minimum_distance != INFINITY {
                 if minimum_distance == plane_intersection_distance {
                     image.put_pixel(x, y, scene.plane.color.to_rgba());
-                    println!("plane intersect");
                 } else if minimum_distance == sphere_intersection_distance {
                     image.put_pixel(x, y, scene.sphere.color.to_rgba());
-                    println!("sphere intersect");
                 } else {
-                    println!("black pixel");
                     image.put_pixel(x, y, black_pixel);
                 }
             } else {
-                println!("black pixel");
                 image.put_pixel(x, y, black_pixel);
             }
 //

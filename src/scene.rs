@@ -61,7 +61,6 @@ pub struct Scene {
     pub fov: f64,
     pub sphere: Sphere,
     pub plane: Plane,
-    pub light: Light,
 }
 
 //impl Scene {
